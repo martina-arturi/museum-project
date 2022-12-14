@@ -1,0 +1,220 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="https://knowdive.disi.unitn.it/etype#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://knowdive.disi.unitn.it/etype#">
+    <owl:versionIRI rdf:resource="https://knowdive.disi.unitn.it/etype#"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://schema.org/Thing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#ds:Anything"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/Person">
+    <rdfs:subClassOf rdf:resource="https://knowdive.disi.unitn.it/etype#ds:Anything"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Floor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Room"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_GID-300000"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#contains_GID-114720"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://schema.org/Place"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/Place">
+    <rdfs:subClassOf rdf:resource="https://knowdive.disi.unitn.it/etype#ds:Anything"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/VisualArtwork">
+    <rdfs:subClassOf rdf:resource="https://knowdive.disi.unitn.it/etype#ds:Anything"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Visitor">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Museum"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#visiting_GID-5445"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#is_looking_at_GID-4530"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#is_in_GID-114722"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Room"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Question"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_answered_GID-92985"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#doing_GID-108847"/>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Action"/>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Action">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Room">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Everything"/>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Museum">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://knowdive.disi.unitn.it/etype#Everything"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#spatialPartOf_GID-98303"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://knowdive.disi.unitn.it/etype#Floor"/>
+        <owl:onProperty rdf:resource="https://knowdive.disi.unitn.it/etype#has_GID-300000"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Question">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://knowdive.disi.unitn.it/etype#Exhibit">
+    <rdfs:subClassOf rdf:resource="http://schema.org/VisualArtwork"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://knowdive.disi.unitn.it/etype#located_in_GID-779"/>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_occupation_GID-2998">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_name_GID-2">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Floor"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Museum"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_question_content_GID-104177">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Question"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_answer_given_GID-36159">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Question"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_location_GID-779">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Museum"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_title_GID-34045">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_type_GID-103418">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Action"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_surname_GID-34003">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#in_museum_GID-114720">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_dimension_GID-300001">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Room"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_age_GID-27200">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_timestamp_GID-80595">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Action"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_hobbies_GID-2211">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_authors_GID-52388">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_style_GID-26636">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#lookingat_exhibit_GID-4530">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_position_GID-27990">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Action"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#in_room_GID-114720">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#has_theme_GID-112073">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Museum"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Room"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://knowdive.disi.unitn.it/etype#in_floor_GID-114720">
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Exhibit"/>
+    <rdfs:domain rdf:resource="https://knowdive.disi.unitn.it/etype#Visitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>

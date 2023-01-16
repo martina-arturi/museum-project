@@ -17,7 +17,7 @@ The resultant KG can organize a sequence of KGs representing visitors’ profile
 
 ## Data Resouces
 
-- Museum visiting data involving the Trient Consulting Group
+- Museum visiting data involving the Trient Consulting Group (the data cannot be made available as it is under NDA)
 - Additional data found on the Internet
 
 ## Reference Schema

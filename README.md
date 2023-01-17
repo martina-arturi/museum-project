@@ -29,3 +29,7 @@ Schema.org was used to model:
 - Floor
 - Museum
 - Exhibit
+
+## Report 
+
+To have more detailed information about all the procedure to create the KG, you can find out report at https://github.com/martina-arturi/museum-project/blob/main/Documentation/KGE_Museum_Report.pdf

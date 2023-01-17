@@ -15,6 +15,7 @@ for ex in data_exhib :
 		"floor" : ex["floor"],
 		"location_x" : ex["location"]["x"],
 		"location_y" : ex["location"]["y"],
+		"type" : ex["type"],
 		"room" : ex["room"],
 		"authors" : ex["authors"]
 	}

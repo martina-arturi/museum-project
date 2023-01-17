@@ -15,6 +15,7 @@ for v in data :
 		"location_x" : v["location_x"],
 		"location_y" : v["location_y"],
 		"room" : "room_"+v["room"],
+		"type" : v["type"],
 		"authors" : v["authors"]
 	}
 
